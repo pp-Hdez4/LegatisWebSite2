@@ -839,7 +839,7 @@
   /* layout que ya usas */
   flex: 0 0 auto;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   position: relative;
   align-items: center;
@@ -847,14 +847,30 @@
 
   /* imagen + color de fondo en una sola shorthand */
   background: #0C1421 center / contain no-repeat url("public/LegatisLogo.png") !important;
+    background-size: clamp(240px, 38vw, 640px) !important;
+    background-position: center 62% !important;
+}
+/* Tablet */
+@media (max-width: 1024px){
+  .home-hero{
+    height: 80vh;                            /* un poco más alto que antes */
+    background-size: clamp(220px, 50vw, 520px) !important;
+    background-position: center 66% !important;           /* baja más el logo */
+  }
 }
 
-/* (opcional) en móvil un poco menos alto */
+/* Móvil */
 @media (max-width: 640px){
   .home-hero{
-    height: 60vh;
-    background: #0C1421 center / contain no-repeat url("public/LegatisLogo.png") !important;
+    height: 70vh;                            /* más alto para que respire el texto */
+    background-size: clamp(180px, 62vw, 420px) !important;
+    background-position: center 70% !important;           /* baja aún más el logo */
   }
+}
+
+/* Opcional: un pelín más de respiro para el título arriba */
+.home-container11{
+  padding-top: clamp(32px, 10vh, 128px);
 }
  
 .home-bg {
@@ -881,7 +897,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;                 /* coloca el texto arriba */
-  padding-top: clamp(16px, 6vh, 72px);         /* respiro arriba, responsivo */
+  padding-top: clamp(24px, 9vh, 112px);       /* respiro arriba, responsivo */
 }
 
 @media (max-width:640px){
